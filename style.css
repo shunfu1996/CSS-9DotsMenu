@@ -1,0 +1,30 @@
+/* *{
+    margin: 0%;
+    padding: 0%;
+} */
+
+body {
+    background-color: rgba(0, 0, 0, 0.651);
+    display: block;
+}
+
+h1 {
+    display: flex;
+    justify-content: center; /* 左右 */
+}
+
+.center {
+    justify-content: center; /* 左右 */
+    display: flex;
+    align-items: center; /* 上下 */
+    min-height: 100vh;
+
+}
+.nine-Dots-Menu {
+    position: relative;
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+    background: white;
+    border-radius: 10px;
+}
