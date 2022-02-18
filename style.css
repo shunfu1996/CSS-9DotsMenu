@@ -2,9 +2,12 @@
     margin: 0%;
     padding: 0%;
 } */
+h1 {
+    color: aliceblue;
+}
 
 body {
-    background-color: rgba(0, 0, 0, 0.651);
+    background-color: rgb(0, 0, 0);
     display: block;
 }
 
@@ -14,17 +17,74 @@ h1 {
 }
 
 .center {
-    justify-content: center; /* 左右 */
     display: flex;
+    justify-content: center; /* 左右 */
     align-items: center; /* 上下 */
     min-height: 100vh;
-
+    
 }
 .nine-Dots-Menu {
+    display: flex;
+    justify-content: center; /* 左右 */
+    align-items: center; /* 上下 */
     position: relative;
     cursor: pointer;
     width: 70px;
     height: 70px;
     background: white;
     border-radius: 10px;
+    transition: 0.5s;
+    transition-delay: 0.8s;
+}
+
+.nine-Dots-Menu.active {
+    width: 300px;
+    height: 300px;
+    transition-delay: 0s;
+}
+.nine-Dots-Menu.active span {
+    display: flex;
+    justify-content: center; /* 左右 */
+    align-items: center; /* 上下 */
+    width: 5em;
+    height: 5em;
+    background: rgba(76, 78, 76, 0.787);
+    transform: translate(calc(90px * var(--x)),calc(90px * var(--y)));
+}
+
+.nine-Dots-Menu span {
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    transition: 0.5s;
+    transform: translate(calc(15px * var(--x)),calc(15px * var(--y)));
+
+    transition-delay: calc(0.1s * var(--i));
+}
+
+.nine-Dots-Menu.active span ion-icon {
+    font-size: 1.35em;
+    /* transition-delay: calc(0.1s * var(--i)); */
+}
+.nine-Dots-Menu.active span:hover ion-icon {
+    color: red;
+    filter: drop-shadow(0 0 10px red) drop-shadow(0 0 16px red) drop-shadow(0 0 25px red);
+}
+
+.nine-Dots-Menu span ion-icon {
+    font-size: 0em;
+    transition: 1s;
+}
+
+
+
+.nine-Dots-Menu p {
+    border-radius: 50%;
+    background-color: rgb(184, 7, 7);
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    /* transform: translate(calc(12px * 1),calc(12px * 2)); */
 }
